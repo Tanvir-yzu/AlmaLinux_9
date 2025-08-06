@@ -5,9 +5,9 @@ After=network.target postgresql-14.service
 [Service]
 User=centos
 Group=nginx
-WorkingDirectory=/opt/<project_directory>
-Environment="PATH=/opt/<project_directory>/venv/bin"
-ExecStart=/opt/<project_directory>/venv/bin/uwsgi --ini /opt/<project_directory>/uwsgi/uwsgi.ini
+WorkingDirectory=/opt/<project_name>
+Environment="PATH=/opt/<project_name>/venv/bin"
+ExecStart=/opt/<project_name>/venv/bin/uwsgi --ini /opt/<project_name>/uwsgi/uwsgi.ini
 Restart=always
 KillSignal=SIGQUIT
 Type=notify
